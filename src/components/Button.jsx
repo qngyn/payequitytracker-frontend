@@ -1,8 +1,8 @@
 import "./Button.css"
-const Button = ({children}) => {
-    console.log(children)
+const Button = ({children, ...props}) => {
+    console.log(props)
     return (
-        <button>{children}</button>
+        <button onClick={props.onClick}>{children}</button>
     )
 
 }
