@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa6"
 import Button from "./Button";
 const SignupForm = () => {
     const [formData, setFormData] = useState({
@@ -13,6 +14,15 @@ const SignupForm = () => {
         location:"",
 
     })
+    const [showPassword, setShowPassword] = useState(false)
+    const [showRePassword, setShowRePassowrd] = useState(false)
+
+    const togglePassword = () => {
+        setShowPassword((prevState) => !prevState)
+    }
+    const toggleRePassword = () => {
+        setShowRePassowrd((prevState) => !prevState)
+    }
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -22,14 +32,25 @@ const SignupForm = () => {
                 [name]:value
             }
         })
+    }
 
+    const handleSubmit = (e) => {
+        e.prevenDefault()
+
+        const { password } = formData
+        const repassword = e.target.retypeppassword.value
+
+        if (password === repassword) {
+            console.log("checked!")
+        } else {
+            alert("Passwords don't match. Please re-enter.")
+        }
     }
     
     return (
         <form>
             <div>
                 <div>
-
                     <div>
                         <label htmlFor="username">
                             Username:
@@ -63,20 +84,27 @@ const SignupForm = () => {
                             Password:
                         </label>
                         <input 
-                            type="text" 
+                            type={showPassword ? "text" : "password"}
                             id="password"
                             name="password"
                             value={formData.password}
                             onChange={handleInputChange}
                             required
                         />
+                        {showPassword ?  <FaEyeSlash onClick={togglePassword} /> : <FaEye onClick={togglePassword} />}
                     </div>
 
                     <div>
                         <label>
                             Re-type Password:
                         </label>
-                        <input type="text" required/>
+                        <input 
+                            type={showRePassword ? "text" : "password"}
+                            id="retypepassword"
+                            name="retypepassword"
+                            required
+                        />
+                        {showRePassword ?  <FaEyeSlash onClick={toggleRePassword} /> : <FaEye onClick={toggleRePassword} />}
                     </div>
 
                     <div>
@@ -171,7 +199,7 @@ const SignupForm = () => {
                     </div>
                 </div>
                 <div>
-                    <Button> Submit </Button>
+                    <Button onClick={handleSubmit}> Submit </Button>
                 </div>
             </div>
         </form>
