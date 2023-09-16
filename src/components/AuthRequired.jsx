@@ -1,14 +1,13 @@
-import { Navigate, Outlet } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom";
 
 const AuthRequired = () => {
-    const authenticated= false 
+  const authenticated = false;
 
-    if (!authenticated) {
-        return <Navigate 
-            to="/login" 
-            state={{message: "You must log in first"}}
-            />
-    }
+  if (!authenticated) {
+    return (
+      <Navigate to="/login" state={{ message: "You must log in first" }} />
+    );
+  }
 
-    return <Outlet />
-}
+  return <Outlet />;
+};
