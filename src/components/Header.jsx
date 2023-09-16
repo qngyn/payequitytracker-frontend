@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <nav> 
-            This is a header
+            HEADER
         </nav>
     )
 }
