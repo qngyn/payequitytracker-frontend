@@ -1,10 +1,9 @@
-import "./Login.css"
 import LoginForm from "../components/LoginForm";
 import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
-        <div>
+        <div className="form-container">
             <LoginForm />
             <div>
                 <p> Haven't signed up yet? <Link to="/signup">Sign Up</Link></p>

@@ -6,6 +6,7 @@ import IntroPage from './pages/IntroPage'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import AuthRequired from './components/AuthRequired'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Route path="/" element={<IntroPage />} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup />}/>
+
+          <Route element={<AuthRequired />} />
+            <Route path="/home" element={<Home />}/>
         </Route>
         <Route path="*" element={<Error />}/>
       </Routes>

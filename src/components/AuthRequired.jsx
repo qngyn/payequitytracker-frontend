@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom"
 
 const AuthRequired = () => {
-    const authenticated= false 
+    const authenticated = false 
 
     if (!authenticated) {
         return <Navigate 
@@ -9,6 +9,7 @@ const AuthRequired = () => {
             state={{message: "You must log in first"}}
             />
     }
-
     return <Outlet />
 }
+
+export default AuthRequired;
