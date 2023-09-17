@@ -102,7 +102,7 @@ const SurveyForm = () => {
                             required
                         >
                             <option value="" disabled hidden> years of experience</option>
-                            <option value="less1">Less than 1 year</option>
+                            <option value="less1">Less than 1 </option>
                             <option value="onetwo">1 - 2</option>
                             <option value="threefive">3 - 5</option>
                             <option value="sixten">6 - 10</option>
