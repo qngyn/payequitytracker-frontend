@@ -1,54 +1,260 @@
+
+/* GENERAL STYLING */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Cherry+Bomb+One&family=Courgette&family=Open+Sans:wght@400;600&family=Poppins&family=Roboto:wght@100&family=Shadows+Into+Light&family=Yellowtail&display=swap');
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: #ff99cc !important; 
+  background: #f4f0f7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
+
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 600;
+  color: #ff99cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: #dd4490;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #cb5d94;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+button {
+  background-color: #ff99cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  margin: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
 }
+
+button:hover {
+  background-color: #dd4490;
+}
+
+/* SIGN UP AND SIGN IN (FORM)STYLING*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.form-format{
+  display: flex;
+  background: white;
+  width: 45rem;
+  height: 100%;
+  padding: 0.5% 5% 0 5%;
+  margin: 0 0 5% 0;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+}
+
+/* .signin-form {
+  display: flex;
+  background: white !important;
+  width: 35rem;
+  height: 25rem;
+  padding: 0.5% 5% 0 5%;
+  margin: 0 0 5% 0;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+} */
+
+.form-components {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0 0 0;
+}
+
+.form-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  background-color: transparent !important; 
+  width: 80%;
+  padding: 12px;
+  border:none;
+  border-bottom: 1px solid #ff99cc;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #ff99cc;
+}
+
+.form-input:focus{
+  outline: none;
+  border-bottom: 1px solid #dd4490;
+  color:  #ff99cc; 
+}
+
+.eye-icon{
+  margin-left: -1.5rem;
+  color: #dd4490;
+}
+
+.direct-to{
+  font-weight: 500;
+}
+
+.form-name{
+  font-weight: 600;
+  font-size: 2.5em;
+  font-family: 'Yellowtail', cursive;
+  color: #dd4490;
+  text-align: center;
+}
+
+/* INTRO AND HOME PAGE STYLING*/
+
+.headliner {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 600;
+  font-size: 5em;
+  letter-spacing: 0.05em;
+  color: #dd4490;
+  text-align: center;
+
+}
+
+.intro-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-description{
+  padding: 1% 15%;
+  font-weight: 400;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 1em 0; 
+  margin-bottom: 4rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.right-links {
+  display: flex;
+  gap: 20px;
+}
+
+.left-links {
+  margin: 0 0 0 1rem;
+  font-weight: bold;
+  font-family: 'Yellowtail', cursive;
+}
+
+.header-link{
+  padding: 0 1em ;
+}
+
+.redirecting {
+  font-family: 'Yellowtail', cursive;
+  font-size: 2em;
+  
+}
+
+.forum-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; 
+}
+
+.forum-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5em;
+  font-family: 'Yellowtail', cursive;
+  color: #dd4490;
+  top: 10%; 
+  width: 100%; 
+}
+
+.card-header{
+  margin: 0;
+  color: #dd4490;
+}
+
+.forum-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.card-container {
+  width: 100%;
+  padding: 0.2em 20% 1em ;
+  background: white;
+  margin: 10% 0 0 0;
+  border-radius: 20px;
+  width: 500px;
+}
+.card-subtitle {
+  align-items: left;
+  font-style: italic;
+  color: lightgray;
+}
+.card-detail {
+  color: grey;
+}
+
+
+.card-span{
+  font-weight: bold;
+  color: #ff99cc;
+}
+
+
+

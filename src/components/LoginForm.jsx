@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const togglePassword = () => {
     setShowPassword((prevState) => !prevState);
@@ -25,46 +27,51 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/home");
   };
 
   return (
-    <form>
+    <form className="form-format" onSubmit={handleSubmit}>
       <div>
         <div>
-          <div>
-            <label htmlFor="username">Username:</label>
+          <p className="form-name">sign in</p>
+          <div className="form-components">
             <input
-              id="username"
+              id="email"
+              name="email"
               type="text"
-              value={formData.username}
+              value={formData.email}
               onChange={handleInputChange}
+              placeholder="email"
+              className="form-input"
               required
             />
           </div>
 
-          <div>
-            <label htmlFor="password">Password:</label>
+          <div className="form-components">
             <input
               id="password"
+              name="password"
               type={showPassword ? "text" : "password"}
               value={formData.password}
               onChange={handleInputChange}
+              placeholder="password"
+              className="form-input"
               required
             />
             {showPassword ? (
-              <FaEyeSlash onClick={togglePassword} />
+              <FaEyeSlash onClick={togglePassword} className="eye-icon" />
             ) : (
-              <FaEye onClick={togglePassword} />
+              <FaEye onClick={togglePassword} className="eye-icon" />
             )}
           </div>
         </div>
 
         <div>
-          <Button> Submit </Button>
+          <Button type="submit"> Submit </Button>
         </div>
       </div>
     </form>
   );
 };
-
 export default LoginForm;

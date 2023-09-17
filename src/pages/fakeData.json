@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "email": "test123@gmail.com",
+        "password": "test123",
+        "gender": "female",
+        "pronounces": "she/her",
+        "position": "Software Engineer", 
+        "yoe": "1 - 2",
+        "industry": "Technology",
+        "salary": 200000,
+        "description": "front-end developer",
+        "location": "new york, ny, usa"
+
+    }, 
+    {
+        "id": 2,
+        "email": "test234@gmail.com",
+        "password": "test234",
+        "gender": "non-binary",
+        "pronounces": "they/them",
+        "position": "Software Engineer", 
+        "yoe": " 3 - 5",
+        "industry": "Insurance",
+        "salary": 150000,
+        "description": "back-end developer",
+        "location": "cleveland, oh, usa"
+
+    },
+    {
+        "id": 4,
+        "email": "test234@gmail.com",
+        "password": "test234",
+        "gender": "male",
+        "pronounces": "he/him",
+        "position": "Software Engineer", 
+        "yoe": " 3 - 5",
+        "industry": "Insurance",
+        "salary": 150000,
+        "description": "infrastructure team",
+        "location": "san jose, ca, usa"
+
+    }
+]
