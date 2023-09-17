@@ -21,49 +21,13 @@ Welcome to the frontend documentation for the Pay Equity Tracker project. This d
 - **Styling**: CSS
 - **Development Environment**: Node.js, npm
 
-## Pages
-
-### Login Page
-
-The Login Page allows users to log in to their accounts. Users can enter their credentials to access their profiles and the Pay Equity Tracker features.
-
-### Sign Up Page
-
-The Sign Up Page enables new users to create accounts on the Pay Equity Tracker platform. Users provide essential information to register and gain access to salary tracking features.
-
-### Confirmation Page
-
-After a successful sign-up, users are directed to the Confirmation Page, where they receive a confirmation message and guidance on next steps.
-
-### Survey Page
-
-The Survey Page allows users to provide additional information about their job, industry, and salary-related details. This data is used to enhance the accuracy of salary comparisons.
-
-### Intro Page
-
-The Intro Page serves as a landing page for users who have not logged in or signed up. It provides an introduction to the Pay Equity Tracker and encourages users to take action.
-
-### Home Page
-
-The Home Page is the central hub of the application. It provides access to various features, including salary data submission, searching and comparing salaries, and accessing pay gap analysis insights.
-
-### Profile Page (Work in Progress)
-
-The Profile Page, currently under development, will allow users to manage their profiles, update information, and review their salary data.
-
-### Forum Page (Work in Progress)
-
-The Forum Page, also a work in progress, will provide a platform for users to engage in discussions, share experiences, and exchange strategies related to pay equity.
-
 ## Getting Started
 
 To get started with the Pay Equity Tracker frontend, follow these steps:
 
-1. Clone the Repository: Clone the frontend repository to your local machine using Git:
-   git clone https://github.com/your-username/pay-equity-tracker-frontend.git
+1. Clone the Repository: Clone the frontend repository to your local machine using Git.
 
-2. Navigate to the Project Folder: Change your current directory to the project folder:
-   cd pay-equity-tracker-frontend
+2. Navigate to the Project Folder: Change your current directory to the project folder.
 
 3. Install Dependencies: Install the project's dependencies using npm:
    npm install
