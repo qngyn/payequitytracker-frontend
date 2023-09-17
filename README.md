@@ -11,6 +11,10 @@ Currently, two official plugins are available:
 
 Welcome to the frontend documentation for the Pay Equity Tracker project. This document provides an overview of the frontend setup, key features, and details about various pages of the application.
 
+## Backend Repository
+
+You can find the backend code for this project in the Backend Repository (https://github.com/rica213/pay_equity).
+
 ## Project Overview
 
 **Pay Equity Tracker** is a web application designed for International Equal Pay Day-themed hackathon organized by TechTogether. It empowers individuals to track and compare their salaries and benefits with others in their industry, location, and experience level anonymously. This tool helps marginalized genders assess whether they are being paid fairly and provides resources and support to address pay disparities.
