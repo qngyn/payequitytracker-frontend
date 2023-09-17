@@ -43,46 +43,44 @@ const SignupForm = () => {
         <form className="signup-form">
             <div>
                 <div className="signup-info">
+                    <p className="form-name">sign up</p>
                     <div className="signup-components">
-                        <label htmlFor="email" className="form-label">
-                            Email:
-                        </label>
                         <input 
                             type="email" 
                             id="email"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
+                            className="form-input"
+                            placeholder="email"
                             required
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="password">
-                            Password:
-                        </label>
+                    <div className="signup-components">
                         <input 
                             type={showPassword ? "text" : "password"}
                             id="password"
                             name="password"
                             value={formData.password}
                             onChange={handleInputChange}
+                            className="form-input"
+                            placeholder="password"
                             required
                         />
-                        {showPassword ?  <FaEyeSlash onClick={togglePassword} /> : <FaEye onClick={togglePassword} />}
+                        {showPassword ?  <FaEyeSlash onClick={togglePassword} className="eye-icon" /> : <FaEye onClick={togglePassword} className="eye-icon"/>}
                     </div>
 
-                    <div>
-                        <label>
-                            Re-type Password:
-                        </label>
+                    <div className="signup-components">
                         <input 
                             type={showRePassword ? "text" : "password"}
                             id="retypepassword"
                             name="retypepassword"
+                            className="form-input"
+                            placeholder="re-type password"
                             required
                         />
-                        {showRePassword ?  <FaEyeSlash onClick={toggleRePassword} /> : <FaEye onClick={toggleRePassword} />}
+                        {showRePassword ?  <FaEyeSlash onClick={toggleRePassword}  className="eye-icon"/> : <FaEye onClick={toggleRePassword} className="eye-icon"/>}
                     </div>
                 </div>
                 <div>

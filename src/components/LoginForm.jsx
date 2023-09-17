@@ -29,34 +29,33 @@ const LoginForm = () => {
     }
 
     return (
-        <form>
+        <form className="signin-form">
             <div> 
                 <div>
-                    <div>
-                        <label htmlFor="username">
-                            Username: 
-                        </label>
+                    <p className="form-name">sign in</p>
+                    <div className="signup-components">
                         <input 
                             id="username"
                             type="text" 
                             value={formData.username}
                             onChange={handleInputChange}
+                            placeholder="email"
+                            className="form-input"
                             required 
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="password">
-                            Password: 
-                        </label>
+                    <div className="signup-components">
                         <input 
                             id="password"
                             type={showPassword ? "text" : "password"}
                             value={formData.password}
                             onChange={handleInputChange}
+                            placeholder="password"
+                            className="form-input"
                             required 
                         />
-                        {showPassword ?  <FaEyeSlash onClick={togglePassword} /> : <FaEye onClick={togglePassword} />}
+                        {showPassword ?  <FaEyeSlash onClick={togglePassword} className="eye-icon"/> : <FaEye onClick={togglePassword} className="eye-icon"/>}
                     </div>
                 </div>
                 

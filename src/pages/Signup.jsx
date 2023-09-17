@@ -5,7 +5,7 @@ const Signup = () => {
         <div className="form-container">
             <SignupForm />
             <div> 
-                <p> Already have an account? <Link to="/login">Login </Link></p>
+                <p className="direct-to"> Already have an account? <Link to="/login">Login </Link></p>
             </div>
         </div>
     )

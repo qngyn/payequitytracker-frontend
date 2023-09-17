@@ -6,7 +6,7 @@ const Login = () => {
         <div className="form-container">
             <LoginForm />
             <div>
-                <p> Haven't signed up yet? <Link to="/signup">Sign Up</Link></p>
+                <p className="direct-to"> Haven't signed up yet? <Link to="/signup">Sign Up</Link></p>
             </div>
             
         </div>
