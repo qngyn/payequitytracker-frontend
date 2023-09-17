@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6"
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 const SignupForm = () => {
     const [formData, setFormData] = useState({
         email: "",
         password: ""
     })
+    const [retypePassword, setRetypePassword] = useState("");
     const [showPassword, setShowPassword] = useState(false)
     const [showRePassword, setShowRePassowrd] = useState(false)
+    const navigate = useNavigate()
 
     const togglePassword = () => {
         setShowPassword((prevState) => !prevState)
@@ -26,25 +29,27 @@ const SignupForm = () => {
         })
     }
 
+
     const handleSubmit = (e) => {
-        e.prevenDefault()
+        e.preventDefault()
 
         const { password } = formData
-        const repassword = e.target.retypeppassword.value
+        const repassword = retypePassword
+        console.log("password", password, "repassword", repassword)
 
         if (password === repassword) {
-            console.log("checked!")
+            navigate("/confirmation")
         } else {
             alert("Passwords don't match. Please re-enter.")
         }
     }
     
     return (
-        <form className="signup-form">
+        <form className="form-format" onSubmit={handleSubmit}>
             <div>
                 <div className="signup-info">
                     <p className="form-name">sign up</p>
-                    <div className="signup-components">
+                    <div className="form-components">
                         <input 
                             type="email" 
                             id="email"
@@ -57,7 +62,7 @@ const SignupForm = () => {
                         />
                     </div>
 
-                    <div className="signup-components">
+                    <div className="form-components">
                         <input 
                             type={showPassword ? "text" : "password"}
                             id="password"
@@ -71,20 +76,21 @@ const SignupForm = () => {
                         {showPassword ?  <FaEyeSlash onClick={togglePassword} className="eye-icon" /> : <FaEye onClick={togglePassword} className="eye-icon"/>}
                     </div>
 
-                    <div className="signup-components">
+                    <div className="form-components">
                         <input 
                             type={showRePassword ? "text" : "password"}
                             id="retypepassword"
                             name="retypepassword"
                             className="form-input"
                             placeholder="re-type password"
+                            onChange={(e) => setRetypePassword(e.target.value)}
                             required
                         />
                         {showRePassword ?  <FaEyeSlash onClick={toggleRePassword}  className="eye-icon"/> : <FaEye onClick={toggleRePassword} className="eye-icon"/>}
                     </div>
                 </div>
                 <div>
-                    <Button onClick={handleSubmit}> Submit </Button>
+                    <Button> Submit </Button>
                 </div>
             </div>
         </form>

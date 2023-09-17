@@ -6,8 +6,8 @@
   line-height: 1.6;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(15, 1, 1, 0.87) !important; 
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  color: #ff99cc !important; 
+  background: #f4f0f7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,13 +17,14 @@
 
 a {
   font-weight: 600;
-  color: #0078d4;
+  color: #ff99cc;
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #dd4490;
 }
 
 a:hover {
-  color: #005ea2;
+  color: #cb5d94;
 }
 
 body {
@@ -42,7 +43,7 @@ h1 {
 
 
 button {
-  background-color: #33ccff;
+  background-color: #ff99cc;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -55,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #0da6d9;
+  background-color: #dd4490;
 }
 
 /* SIGN UP AND SIGN IN (FORM)STYLING*/
@@ -65,11 +66,11 @@ button:hover {
   align-items: center; 
 }
 
-.signup-form{
+.form-format{
   display: flex;
   background: white;
-  width: 25rem;
-  height: 30rem;
+  width: 45rem;
+  height: 100%;
   padding: 0.5% 5% 0 5%;
   margin: 0 0 5% 0;
   border-radius: 20px;
@@ -78,7 +79,7 @@ button:hover {
   box-shadow: 5px 5px 5px rgba(0,0,0,.1);
 }
 
-.signin-form {
+/* .signin-form {
   display: flex;
   background: white !important;
   width: 35rem;
@@ -89,9 +90,9 @@ button:hover {
   flex-direction: column;
   justify-content: space-around;
   box-shadow: 5px 5px 5px rgba(0,0,0,.1);
-}
+} */
 
-.signup-components {
+.form-components {
   display: flex;
   justify-content: center;
   padding: 0.5rem 0 0 0;
@@ -107,20 +108,22 @@ button:hover {
   width: 80%;
   padding: 12px;
   border:none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ff99cc;
   font-size: 16px;
   margin-bottom: 20px;
   display: inline-block;
+  color: #ff99cc;
 }
 
 .form-input:focus{
   outline: none;
-  border-bottom: 1px solid #ff99cc;
+  border-bottom: 1px solid #dd4490;
   color:  #ff99cc; 
 }
 
 .eye-icon{
   margin-left: -1.5rem;
+  color: #dd4490;
 }
 
 .direct-to{
@@ -131,7 +134,7 @@ button:hover {
   font-weight: 600;
   font-size: 2.5em;
   font-family: 'Yellowtail', cursive;
-  color: #ff99cc;
+  color: #dd4490;
 }
 
 /* INTRO AND HOME PAGE STYLING*/
@@ -141,6 +144,8 @@ button:hover {
   font-weight: 600;
   font-size: 5em;
   letter-spacing: 0.05em;
+  color: #dd4490;
+
 }
 
 .intro-button{
@@ -154,4 +159,31 @@ button:hover {
   font-weight: 400;
   font-size: 1.5em;
   letter-spacing: 0.05em;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 1em 0; 
+}
+
+.header-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+  padding-right: 20px;  
+}
+
+.header-link{
+  padding: 0 1em ;
+}
+
+.redirecting {
+  font-family: 'Yellowtail', cursive;
+  font-size: 2em;
+  
 }

@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({
-        username:"",
+        email:"",
         password:"",
     })
     const [showPassword, setShowPassword] = useState(false)
@@ -29,15 +29,16 @@ const LoginForm = () => {
     }
 
     return (
-        <form className="signin-form">
+        <form className="form-format">
             <div> 
                 <div>
                     <p className="form-name">sign in</p>
-                    <div className="signup-components">
+                    <div className="form-components">
                         <input 
-                            id="username"
+                            id="email"
+                            name="email"
                             type="text" 
-                            value={formData.username}
+                            value={formData.email}
                             onChange={handleInputChange}
                             placeholder="email"
                             className="form-input"
@@ -45,9 +46,10 @@ const LoginForm = () => {
                         />
                     </div>
 
-                    <div className="signup-components">
+                    <div className="form-components">
                         <input 
                             id="password"
+                            name="password"
                             type={showPassword ? "text" : "password"}
                             value={formData.password}
                             onChange={handleInputChange}

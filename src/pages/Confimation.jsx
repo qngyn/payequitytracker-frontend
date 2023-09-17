@@ -5,12 +5,12 @@ const Confirmation = () => {
 
     useEffect( () => {
         setTimeout(() => {
-            navigate("/", {replace: true});
+            navigate("/survey", {replace: true});
         }, 3000)
     }, [])
     return (
         <div>
-            <p> You are successfully signed up! Now direct you to the main page.</p>
+            <p className="redirecting"> You are successfully signed up! Now let's get to know more about you.</p>
         </div>
     )
 }

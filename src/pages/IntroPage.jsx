@@ -23,7 +23,7 @@ const IntroPage = () => {
                 <Typewriter
                     onInit={(typewriter) => {
                         typewriter
-                            .typeString("pay euity tracker")
+                            .typeString("pay equity tracker")
                             .start()
                             .callFunction(() => {
                                 setShowFade(true);
