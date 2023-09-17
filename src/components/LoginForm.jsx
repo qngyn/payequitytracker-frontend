@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6"
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const LoginForm = () => {
@@ -8,6 +9,7 @@ const LoginForm = () => {
         password:"",
     })
     const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate();
 
     const togglePassword = () => {
         setShowPassword((prevState) => !prevState)
@@ -25,11 +27,11 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        navigate("/home")
     }
 
     return (
-        <form className="form-format">
+        <form className="form-format" onSubmit={handleSubmit}>
             <div> 
                 <div>
                     <p className="form-name">sign in</p>
@@ -62,7 +64,7 @@ const LoginForm = () => {
                 </div>
                 
                 <div>
-                    <Button> Submit </Button>
+                    <Button type="submit"> Submit </Button>
 
                 </div>
                 

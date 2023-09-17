@@ -13,7 +13,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
+
 
 a {
   font-weight: 600;
@@ -135,6 +137,7 @@ button:hover {
   font-size: 2.5em;
   font-family: 'Yellowtail', cursive;
   color: #dd4490;
+  text-align: center;
 }
 
 /* INTRO AND HOME PAGE STYLING*/
@@ -161,6 +164,7 @@ button:hover {
   letter-spacing: 0.05em;
 }
 
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -169,6 +173,7 @@ button:hover {
   background-color: whitesmoke;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   padding: 1em 0; 
+  margin-bottom: 4rem;
 }
 
 .header-container{
@@ -187,3 +192,57 @@ button:hover {
   font-size: 2em;
   
 }
+
+.forum-container {
+  padding: 2%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+}
+
+.forum-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5em;
+  font-family: 'Yellowtail', cursive;
+  color: #dd4490
+}
+
+.card-container {
+  width: 100%;
+  padding: 10% 30%;
+  background: white;
+  margin: 10% 0 0 0;
+  border-radius: 20px;
+}
+
+.card-header{
+  margin: 0;
+}
+
+.card-subtitle {
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  font-style: italic;
+  color: lightgray;
+}
+
+
+/* 
+<div className="card-container">
+      <div className="card-header">
+        <h3 className="card-position">Position</h3>
+      </div>
+      <div className="card-subtitle">
+        <h5 className="card-pronounces">Pronounces</h5>
+        <h5 className="card-yoe">YOE</h5>
+        <h5 className="card-location">Location</h5>
+      </div>
+      <div className="card-information">
+        <p className="card-salary">Salary</p>
+        <p className="card-industry">Industry</p>
+        <p className="card-description">Job Description</p>
+      </div>
+    </div>*/
