@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
+import { useDispatch } from "react-redux";
+import { logInUser } from "../redux/features/AuthenticationSlice";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +17,8 @@ const LoginForm = () => {
     setShowPassword((prevState) => !prevState);
   };
 
+  const dispatch = useDispatch();
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => {
@@ -27,7 +31,15 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/home");
+    dispatch(
+      logInUser({
+        user: {
+          email,
+          password,
+        },
+      })
+    );
+    navigate("/survey");
   };
 
   return (

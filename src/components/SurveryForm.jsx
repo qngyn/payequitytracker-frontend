@@ -61,7 +61,7 @@ const SurveyForm = () => {
             >
               <option value="" disabled hidden>
                 {" "}
-                pronounces
+                pronoun
               </option>
               <option value="they">they/them</option>
               <option value="she">she/her</option>
@@ -149,7 +149,7 @@ const SurveyForm = () => {
               type="text"
               id="location"
               className="form-input"
-              placeholder="locaiton"
+              placeholder="location"
               value={info.location}
               onChange={handleInputChange}
               required
