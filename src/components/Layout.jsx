@@ -1,14 +1,12 @@
 import { Outlet } from "react-router-dom";
 const Layout = () => {
-    return (
-        <div className="site-wrapper">
-            <main>
-                <Outlet />
-            </main>
-
-        </div>
-
-    )
-}
+  return (
+    <div className="site-wrapper">
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
 
 export default Layout;
