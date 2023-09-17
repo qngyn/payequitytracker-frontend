@@ -1,4 +1,5 @@
 
+/* GENERAL STYLING */
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Cherry+Bomb+One&family=Courgette&family=Open+Sans:wght@400;600&family=Poppins&family=Roboto:wght@100&family=Shadows+Into+Light&family=Yellowtail&display=swap');
 :root {
   font-family: 'Inter', sans-serif;
@@ -41,7 +42,7 @@ h1 {
 
 
 button {
-  background-color: #0078d4;
+  background-color: #33ccff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -54,23 +55,23 @@ button {
 }
 
 button:hover {
-  background-color: #005ea2;
+  background-color: #0da6d9;
 }
 
+/* SIGN UP AND SIGN IN (FORM)STYLING*/
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Horizontally center the form */
   align-items: center; 
 }
 
 .signup-form{
   display: flex;
   background: white;
-  width: 35rem;
-  height: 25rem;
-  padding: 10% 5%;
-  margin: 10%;
+  width: 25rem;
+  height: 30rem;
+  padding: 0.5% 5% 0 5%;
+  margin: 0 0 5% 0;
   border-radius: 20px;
   flex-direction: column;
   justify-content: space-around;
@@ -82,8 +83,8 @@ button:hover {
   background: white !important;
   width: 35rem;
   height: 25rem;
-  padding: 10% 5%;
-  margin: 10%;
+  padding: 0.5% 5% 0 5%;
+  margin: 0 0 5% 0;
   border-radius: 20px;
   flex-direction: column;
   justify-content: space-around;
@@ -109,10 +110,6 @@ button:hover {
   border-bottom: 1px solid #ccc;
   font-size: 16px;
   margin-bottom: 20px;
-
-  /* background-color: transparent !important;
-  width: auto; /* Allow variable widths */
-
   display: inline-block;
 }
 
@@ -135,4 +132,26 @@ button:hover {
   font-size: 2.5em;
   font-family: 'Yellowtail', cursive;
   color: #ff99cc;
+}
+
+/* INTRO AND HOME PAGE STYLING*/
+
+.headliner {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 600;
+  font-size: 5em;
+  letter-spacing: 0.05em;
+}
+
+.intro-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-description{
+  padding: 1% 15%;
+  font-weight: 400;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
 }
